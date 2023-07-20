@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "portfolio_categories",
+  "info": {
+    "singularName": "portfolio-category",
+    "pluralName": "portfolio-categories",
+    "displayName": "Portfolio__Category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "portfolios": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::portfolio.portfolio",
+      "mappedBy": "portfolio_categories"
+    }
+  }
+}
